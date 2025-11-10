@@ -1,0 +1,115 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "name": "服装",
+      "children": [
+        {
+          "name": "裙装",
+          "value": 57995,
+          "children": [
+            {
+              "name": "鱼尾裙",
+              "value": 10236
+            },
+            {
+              "name": "半身裙",
+              "value": 25603
+            },
+            {
+              "name": "包臀裙",
+              "value": 22156
+            }
+          ]
+        },
+        {
+          "name": "女士上衣",
+          "value": 30841,
+          "children": [
+            {
+              "name": "oversize衬衫",
+              "value": 5679
+            },
+            {
+              "name": "雪纺衫",
+              "value": 13175
+            },
+            {
+              "name": "polo衫",
+              "value": 11987
+            }
+          ]
+        },
+        {
+          "name": "外套",
+          "value": 110148,
+          "children": [
+            {
+              "name": "牛仔外套",
+              "value": 48671
+            },
+            {
+              "name": "针织外套",
+              "value": 36910
+            },
+            {
+              "name": "风衣外套",
+              "value": 24567
+            }
+          ]
+        },
+        {
+          "name": "裤装",
+          "value": 183258,
+          "children": [
+            {
+              "name": "直筒裤",
+              "value": 65143
+            },
+            {
+              "name": "阔腿裤",
+              "value": 50261
+            },
+            {
+              "name": "铅笔裤",
+              "value": 67854
+            }
+          ]
+        },
+        {
+          "name": "特色类目",
+          "value": 22560,
+          "children": [
+            {
+              "name": "大码装",
+              "value": 2560
+            },
+            {
+              "name": "旗袍",
+              "value": 10000
+            },
+            {
+              "name": "礼服",
+              "value": 10000
+            }
+          ]
+        },
+        {
+          "name": "童装",
+          "value": 20110,
+          "children": [
+            {
+              "name": "童衣",
+              "value": 5000
+            },
+        {
+              "name": "童裤子",
+              "value": 15110
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "msg": "成功"
+}

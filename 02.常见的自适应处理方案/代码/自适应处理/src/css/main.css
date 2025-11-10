@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* 基础重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+html {
+  font-size: 100px;
+}
+
+body {
+  background: #1a1d28;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* 主容器 */
+.dashboard {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem;
+}
+
+/* 头部区域 */
+.dashboard-header {
+  height: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.dashboard-header .title {
+  font-size: 0.36rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #6b8dd6, #2a85ff);
+  background-clip: text;
+}
+.dashboard-header .time-info {
+  font-size: 0.24rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 主内容区 */
+.dashboard-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2rem;
+  overflow: hidden;
+}
+.dashboard-content .chart-container {
+  height: 100%;
+  background: #252a38;
+  border-radius: 0.12rem;
+  box-shadow: 0 0.08rem 0.24rem rgba(0, 0, 0, 0.15), 0 0 0.02rem rgba(255, 255, 255, 0.1);
+  padding: 0.2rem;
+}
+.dashboard-content .chart-container .chart-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-content .chart-container .chart-card .chart-title {
+  font-size: 0.24rem;
+  margin-bottom: 0.16rem;
+  padding-left: 0.1rem;
+  border-left: 0.04rem solid #2a85ff;
+}
+.dashboard-content .chart-container .chart-card .chart-area {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.08rem;
+}
+
+/* 响应式适配 */
+@media (max-aspect-ratio: 16/9) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+    padding-bottom: 0.2rem;
+  }
+  .dashboard-content .chart-container {
+    height: auto;
+    min-height: 4rem;
+    flex: 1;
+  }
+}
+@media (max-aspect-ratio: 16/9) and (max-height: 600px) {
+  .dashboard-header {
+    height: 0.6rem;
+    padding: 0 0.2rem;
+  }
+  .dashboard-header .title {
+    font-size: 0.24rem;
+  }
+  .dashboard-header .time-info {
+    font-size: 0.18rem;
+  }
+  .chart-container {
+    min-height: 3rem !important;
+  }
+  .chart-container .chart-area {
+    height: 2rem !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,9 @@
+{
+  "code": 200,
+  "data|10": [{
+    "_id":"@guid",
+    "name": "@city",
+    "value": "@integer(80, 400)"
+  }],
+  "msg": "成功"
+}
