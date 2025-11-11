@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, shallowRef, type PropType, watch } from "vue" 
+import { onMounted, ref, shallowRef, type PropType, watch } from "vue";
 import type { ECharts, EChartsCoreOption } from "echarts";
 import * as echarts from "echarts";
 
@@ -13,16 +13,19 @@ const props = defineProps({
     required: true,
     default: () => ({}),
   },
-  loading: Boolean
+  loading: Boolean,
 });
 
 // 1.根据DOM初始化echarts实例
 const chartRef = shallowRef<HTMLElement | null>(null);
 const chart = shallowRef<ECharts | null>(null);
 
-function init() { 
-  if (props.option) { 
+function init() {
+  if (props.option) {
     chart.value = echarts.init(chartRef.value);
+    chart.value.on("click", function (params: any) {
+      console.log(params);
+    });
     setOption(props.option);
   }
 }
@@ -41,19 +44,22 @@ function resize() {
   chart.value?.resize();
 }
 
-watch(()=>props.option, () => {
-  setOption(props.option);
-});
+watch(
+  () => props.option,
+  () => {
+    setOption(props.option);
+  }
+);
 
 defineExpose({
   chart,
   setOption,
-  resize
-})
+  resize,
+});
 </script>
 
 <style scoped>
-.chart{
+.chart {
   width: 100%;
   height: 100%;
 }

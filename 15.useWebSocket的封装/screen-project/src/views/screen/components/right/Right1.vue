@@ -46,7 +46,6 @@ const setOptions = (state: Hots[]) => {
     tooltip: {
       show: true,
       formatter: (arg: any) => {
-        console.log(arg);
         const thirdCategory = arg.data.children;
         // 计算出所有三级分类的数值总和
         let total = 0;
